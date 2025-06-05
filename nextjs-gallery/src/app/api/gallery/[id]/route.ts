@@ -6,13 +6,10 @@ export async function GET(
 ) {
     const { id } = await params
     const response = await fetch(`https://jsonplaceholder.typicode.com/photos/${id}`)
-    const photo = await response.json();
+    const data = await response.json();
 
+    data.url = `https://placehold.co/1000x1000/black/white`
+    data.thumbnailUrl = `https://placehold.co/300x300/black/white`
 
- 
-
-    photo.url = `https://placehold.co/1000x1000/black/white`
-    photo.thumbnailUrl = `https://placehold.co/300x300/black/white`
-
-    return NextResponse.json(photo)
+    return NextResponse.json(data)
 }

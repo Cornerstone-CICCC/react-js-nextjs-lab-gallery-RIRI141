@@ -30,7 +30,7 @@ const PhotoPage = async ({ params }: PhotoDetail) => {
         </Link>
 
         <div className="overflow-hidden">
-          <div className="p-6">
+          <div className="p-6 text-center">
             <h1 className="text-2xl font-bold mb-4">{photo.title}</h1>
           </div>
           <div className="relative aspect-square max-w-2xl mx-auto">
